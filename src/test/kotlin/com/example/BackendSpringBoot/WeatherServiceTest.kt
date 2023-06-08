@@ -14,7 +14,7 @@ class WeatherServiceTest {
         //given
 
         //when
-        weatherService.getBanks()
+        weatherService.getWeathers()
         verify(exactly = 1) { dataSource.retrieveWeather() }
         //then
 
