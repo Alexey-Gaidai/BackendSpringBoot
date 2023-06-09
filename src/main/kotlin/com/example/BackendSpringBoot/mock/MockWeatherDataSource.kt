@@ -1,7 +1,7 @@
 package com.example.BackendSpringBoot.mock
 
 import com.example.BackendSpringBoot.dataSource.WeatherDataSource
-import com.example.BackendSpringBoot.models.Weather
+import com.example.BackendSpringBoot.model.Weather
 import org.springframework.stereotype.Component
 
 @Component

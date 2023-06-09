@@ -1,6 +1,6 @@
 package com.example.BackendSpringBoot.dataSource
 
-import com.example.BackendSpringBoot.models.Weather
+import com.example.BackendSpringBoot.model.Weather
 
 interface WeatherDataSource {
     fun retrieveWeather(): Collection<Weather>

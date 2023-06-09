@@ -1,6 +1,6 @@
 package com.example.BackendSpringBoot.controllers
 
-import com.example.BackendSpringBoot.models.Weather
+import com.example.BackendSpringBoot.model.Weather
 import com.example.BackendSpringBoot.service.WeatherService
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*

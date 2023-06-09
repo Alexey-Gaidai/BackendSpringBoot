@@ -1,8 +1,7 @@
 package com.example.BackendSpringBoot.service
 
 import com.example.BackendSpringBoot.dataSource.WeatherDataSource
-import com.example.BackendSpringBoot.models.Weather
-import org.springframework.instrument.classloading.WeavingTransformer
+import com.example.BackendSpringBoot.model.Weather
 import org.springframework.stereotype.Service
 
 @Service

@@ -1,4 +1,4 @@
-package com.example.BackendSpringBoot.models
+package com.example.BackendSpringBoot.model
 
 data class Weather(
     val city: String,
