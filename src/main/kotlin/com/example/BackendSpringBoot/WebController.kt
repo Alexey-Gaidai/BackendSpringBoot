@@ -27,4 +27,8 @@ class WebController {
         model.addAttribute("loginDTO", LoginDTO())
         return "login"
     }
+    @GetMapping("/weather.html")
+    fun weather(model: Model): String {
+        return "weather"
+    }
 }
