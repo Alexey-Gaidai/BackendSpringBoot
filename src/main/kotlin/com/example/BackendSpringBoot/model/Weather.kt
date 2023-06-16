@@ -4,10 +4,11 @@ import jakarta.persistence.*
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
+import kotlin.math.roundToInt
 
 
-private const val ICON_LINK_PATTERN = "https://openweathermap.org/img/w/"
-private const val ICON_LINK_FORMAT = ".png"
+private const val ICON_LINK_PATTERN = "https://openweathermap.org/img/wn/"
+private const val ICON_LINK_FORMAT = "@2x.png"
 
 @Entity
 @Table
@@ -32,6 +33,9 @@ class Weather {
     var min: Double = 0.0
 
     @Column
+    var humidity: Int = 0
+
+    @Column
     var description: String = ""
 
     @Column
@@ -39,6 +43,14 @@ class Weather {
         set(value) {
             field = getIconLink(value)
         }
+
+    @Column
+    var pressure: Int = 0
+        set(value) {
+            field = convertPressure(value)
+        }
+
+
 
     @Column
     var windSpeed: Double = 0.0
@@ -51,5 +63,10 @@ class Weather {
 
     private fun getIconLink(value: String): String {
         return ICON_LINK_PATTERN + value + ICON_LINK_FORMAT
+    }
+
+    private fun convertPressure(pressureInhPA: Int): Int {
+        val pressureInMmHg = pressureInhPA * 0.75006;
+        return pressureInMmHg.roundToInt()
     }
 }

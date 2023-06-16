@@ -43,7 +43,8 @@
             contentType: "application/json",
             data: JSON.stringify(loginData),
             success: function(response) {
-                alert("Login successful!");
+                // Перенаправление на страницу weather.html
+                window.location.href = "weather.html";
             },
             error: function(error) {
                 alert("Login failed: " + error.responseJSON.message);

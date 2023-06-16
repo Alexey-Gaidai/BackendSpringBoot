@@ -39,6 +39,8 @@ class WeatherService(private val weatherRepository: WeatherRepository) {
                     windSpeed = forecastItem.wind.speed
                     windDeg = forecastItem.wind.deg
                     dtTxt = forecastItem.dt_txt
+                    humidity = forecastItem.main.humidity
+                    pressure = forecastItem.main.pressure
                 }
 
                 weatherRepository.save(weather)
